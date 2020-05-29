@@ -4,11 +4,11 @@ $(document).ready(function(){
 $(".saveBtn").on("click", function(){
 //get values in bar
 var value = $(this).siblings(".description").val();
-var time = $(this).parent()attr("id");
+var time = $(this).parent().attr("id");
 
 //save as localStorage
 
-localStorage.setItem(time. value);
+localStorage.setItem(time.value);
 
 
 });
