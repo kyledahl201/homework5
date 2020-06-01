@@ -8,7 +8,7 @@ var time = $(this).parent().attr("id");
 
 //save as localStorage
 
-localStorage.setItem(time.value);
+localStorage.setItem(time, value);
 
 
 });
@@ -24,7 +24,7 @@ function hourUpdater() {
 
         $(".time-block").each(function() {
 
-                var blockHour = parseInt($(this).attr("id").split("-")[]);
+                var blockHour = parseInt($(this).attr("id"))
 
                 // check if time is past 
 
@@ -48,6 +48,19 @@ function hourUpdater() {
 
 
 }
+
+function localQuery() {
+for (var i=9; i <= 17; i++) {
+      var note = localStorage.getItem(i) 
+      console.log(note)
+      if (note) {
+              $("#" + i + " > textarea").val(note)
+      } 
+}
+
+}
+
+localQuery();
 
 
 
